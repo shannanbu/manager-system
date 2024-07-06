@@ -1,5 +1,5 @@
 const config = {
-  ip: '//127.0.0.1',
+  ip: '//8.130.18.154',
 }
 
 export { config }
