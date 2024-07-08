@@ -1,7 +1,18 @@
 import { theme } from 'antd'
+import { MapToken } from 'antd/es/theme/interface'
+import { SeedToken } from 'antd/es/theme/internal'
 import React, { createContext, useState } from 'react'
 
-const AppContext = createContext<any>({})
+export interface IGlobalData {
+  theme: (token: SeedToken) => MapToken
+  menuCollapsed: boolean
+  drawer: boolean
+}
+
+const AppContext = createContext<{
+  globalData?: IGlobalData
+  setGlobalData?: React.Dispatch<React.SetStateAction<IGlobalData>>
+}>({})
 
 export const AppProvider = ({ children }: { children: React.ReactNode }) => {
   const [globalData, setGlobalData] = useState({
