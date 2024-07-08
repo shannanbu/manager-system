@@ -65,7 +65,7 @@ const Layout = React.forwardRef<HTMLDivElement, LayoutProps>(
 
     return (
       <ConfigProvider theme={{ algorithm: globalData.theme }}>
-        <div className={`h-screen flex flex-col overflow-hidden`}>
+        <div className={`h-screen flex flex-col overflow-hidden`} ref={ref}>
           <div
             className={`p-4 flex justify-between border-b border-main dark:border-main-dark dark:bg-black dark:text-white`}
           >
